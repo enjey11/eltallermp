@@ -1,0 +1,1133 @@
+@import url(http://fonts.googleapis.com/css?family=Anton|Oswald);
+
+/****************
+|^| HTML5 |^|
+****************/
+article, aside, audio, canvas, command, detalist, details, embed, figcaption,
+figure, footer, header, hgroup, keygen, mark, meter, nav, output, progress,
+rp, rt, ruby, section, source, summary, time, video
+	{
+		display:block;
+		margin:0;
+		padding:0;
+	}
+
+
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0 auto;
+	min-width:1000px;
+	padding: 0;
+	background-color: #d2d5d5;
+	font-family: 'Dorsa', sans-serif;
+	font-size-adjust:0.488;
+	height:100%;
+}
+
+/*html	{ height:100%;}*/
+
+/************************************************** GLOBALS */
+
+#inicio
+, #nosotros
+, #portafolio
+, #blog{
+	width: 100%;
+	/*height:100%;*/
+}
+
+.wrapper
+	{
+		min-width:980px;
+		max-width:1000px;
+		height:100%;
+		position: relative;
+		margin:0 auto;
+	}
+
+#top-link  
+	{
+		display:none; 
+		width:79px;
+		height:110px;
+		position:fixed; 
+		right:40px;		 
+		bottom:40px; 		
+		background:url("../img/scrolltop.png") no-repeat center;
+		z-index:999;
+	}
+
+.story .float-left
+, .story .float-right
+	{
+		padding: 0 0 0 0;
+		position: relative;
+		width: 350px;
+		z-index: 1000;	
+	}
+.seo
+	{
+		position: absolute;
+		top:5px;
+		left:50%;
+		text-align: center;
+		margin-left:-150px;
+		width:300px; 
+		z-index: 2000;
+		font-family:"Abel", sans-serif;
+		font-size: 1rem;
+		color:#000;
+
+		text-shadow: 1px 1px 1px #fff;
+	}
+.galeria
+	{
+		max-width:1000px;
+		max-height:700px;
+	}
+	.galeria img
+		{
+			width:100%;
+			height:auto;
+		}
+/************************************************** HEADER */
+header
+	{
+		width:100%;
+		height:95px;
+		position: relative;
+		z-index: 3;
+		/*background: transparent url("../img/menu.png") repeat-x center top;*/
+		background: rgba(255,255,255,0.8);
+
+		border-radius:0 0 5px 5px;
+		-moz-border-radius:0 0 5px 5px;
+		-webkit-border-radius:0 0 5px 5px;
+	}
+
+/********************* LOGO */
+
+.logo
+	{
+		width:254px;
+		height:83px;
+		float: left;
+		position: relative;
+		margin:5px 0 0 20px;
+	}
+
+/********************* NAV */
+#nav{
+	list-style: none;
+	position: relative;
+	float: right;
+}
+	#nav li
+		{
+			margin: 35px 30px 0 0;
+			display:inline-block;
+		}
+		#nav li a
+			{
+				font-family:"Abel", sans-serif;
+				font-size:1rem;
+				color:#848484;
+				text-decoration: none;
+				font-weight: bold;
+
+				text-shadow:1px 1px 0 #fff;
+			}
+		#nav li a:hover
+		, #nav li a.current
+			{
+				color:#3ab3e2;
+			}
+
+
+/********************* NAV SECUNDARIO */
+.nav-sec
+	{
+		position: absolute;
+		top:0px;
+		right:0;
+		z-index: 2000;
+		/*background-color: #ffffff;*/
+		/*background: transparent url("../img/menu.png") repeat-x center top;*/
+		padding: 10px;
+
+		border-radius:0 0 5px 5px;
+		-moz-border-radius:0 0 5px 5px;
+		-webkit-border-radius:0 0 5px 5px;
+	}
+	.home-icon
+		{
+			display:block;
+			width:27px;
+			height:22px;
+			background: url("../img/home-icon.png") no-repeat center;
+			float:left;
+			margin:11px 10px 0 10px;
+		}
+		.home-icon:hover
+			{
+				background: url("../img/home-icon-over.png") no-repeat center;
+			}
+	.nav-sec nav
+	, .nav-sec div.nav
+	, .nav-sec img
+		{
+			float:left;
+		}
+	.nav-sec nav
+		{
+			height:30px;
+			margin:7px 20px 0 10px;
+			background-color: #6d6c6c;
+			overflow: hidden;
+
+			border-radius:8px;
+				-moz-border-radius:8px;
+					-webkit-border-radius:8px;
+			box-shadow:1px 1px 0 #fff, inset 2px 2px 5px #333;
+				-moz-box-shadow:1px 1px 0 #fff, inset 2px 2px 5px #333;
+					-webkit-box-shadow:1px 1px 0 #fff, inset 2px 2px 5px #333;
+		}
+		.nav-sec nav:hover
+			{
+				height:auto;
+			}
+		.nav-sec nav ul
+			{
+				width:auto;			
+				
+			}
+			.nav-sec nav li
+				{
+					text-align: center;
+					height:30px;
+					display:block;
+					width:auto;	
+					padding:0 8px;
+					font-family:"Abel", sans-serif;
+					font-size:1rem;
+					color:#fff;
+					text-decoration: none;
+					font-weight: bold;
+					cursor:pointer;
+					line-height:32px;
+
+					text-shadow:1px 1px 0 #000;
+				}
+			.nav-sec nav li span
+				{
+					display: block;
+					height:13px;
+					width:9px;
+					background: url("../img/arrow-menu.png") center no-repeat;
+					float: right;
+					margin: 8px 15px 0 -10px;
+				}
+				.nav-sec nav li a
+					{
+						font-family:"Abel", sans-serif;
+						font-size:1rem;
+						color:#fff;
+						text-decoration: none;
+						font-weight: bold;
+
+						text-shadow:1px 1px 0 #000;
+					}
+				.nav-sec li a:hover
+				, .nav-sec li a[name="current"]
+					{
+						color:#848484;
+					}
+
+/************************************************** INICIO */
+
+#inicio
+	{
+		background:url(../img/bgHome.png) center 0 repeat-x fixed;
+		color: white;
+		height: 768px;
+		margin: 0 auto;
+		padding: 0 0 0px 0;
+		position: relative;
+	}
+	#inicio .redes
+		{
+			position: absolute;
+			top:760px;
+			right:0;
+			z-index: 200;
+		}
+	#inicio .bg
+		{
+			height:813px;
+			width:1000px;
+			margin:0 auto;
+			/*background: url("../img/home-logo.png") 51% 65% no-repeat fixed;*/
+			position:absolute;
+			z-index: 2;
+		}
+		#inicio .text
+			{
+				margin:60px 109px 0 0;
+				/*min-width: 980px;*/
+				width: auto;				
+				float: right;
+				z-index: 4;
+				background: transparent url("../img/home-linea.png") left 100px no-repeat;
+			}
+				#inicio .text .h4
+					{
+						font-family: 'Dorsa', sans-serif;
+						font-size:110px;
+						text-transform: capitalize;
+						font-weight:800;
+						line-height:130px;
+						letter-spacing: 3px;
+						text-align:right;
+						
+						color:#049eca;
+				        				        
+				        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;				        
+					}
+
+				#inicio .text p
+					{
+						font-family:"Century Gothic", sans-serif;
+						color:#494948;
+						font-size:14px;
+						margin-top:-10px;
+						text-align: right;
+					}
+	#inicio .ave1
+		{
+			position: absolute;
+			left:-158px;
+		}
+	
+	#inicio .ave2
+		{
+			position: absolute;
+			top:138px;
+			right:-73px;
+		}
+	#inicio .q
+		{
+			position: absolute;
+			top:570px;
+			left:50%;
+			margin-left:-36px;
+		}
+
+
+/************************************************** NOSOTROS */
+
+#nosotros
+	{
+		background: url(../img/nosotros.jpg) center top repeat-x fixed;
+		color: white;
+		height: 935px;
+		margin: 0 auto;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	#nosotros .ave1
+		{
+			position:absolute;
+			top:461px;
+			left:0;
+		}
+
+	#nosotros .ave2
+		{
+			position:absolute;
+			top:47px;
+			right:0;		
+		}
+	
+	#nosotros .html5css3
+		{
+			position:absolute;
+			top:855px;	
+			right:0;		
+		}
+
+	#nosotros .bg
+		{
+			min-width:1444px;
+			max-width:1444px;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:50%;
+			margin-left:-641px;
+			z-index: 1;
+		}	
+	#nosotros .wrapper .story .float-left
+		{
+			width:500px;
+		}
+	#nosotros .bgtext
+		{
+			background: url(../img/nosotros-img3.png) 49% 171px no-repeat fixed;
+			height: 935px;
+			margin: 0 auto;
+			padding: 0;
+			position: absolute;
+			width: 1000px;
+			z-index: 2;
+		}
+	
+	#nosotros .text
+		{
+			margin:27px 0 0 0;
+			width: 250px;				
+			float: left;
+			background: transparent url("../img/nosotros-linea.png") left 110px no-repeat;
+		}
+		#nosotros .text h3
+			{
+				font-family: 'Dorsa', sans-serif;
+				font-size:110px;
+				text-transform: uppercase;
+				font-weight:800;
+				/*background-color: #feffff;
+				color: transparent;*/
+				color:#feffff;
+				letter-spacing: 3px;
+				text-align:left;					
+
+				/*-webkit-background-clip: text;
+				-moz-background-clip: text;
+				background-clip: text;*/
+		        
+		        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
+		        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
+			}
+		#nosotros .txt
+		, #nosotros .art p
+			{
+				font-family:"Abel", sans-serif;
+				font-size:0.9rem;
+				color:#ffffff;
+				padding:20px 0 0 0;
+
+				text-shadow:1px 1px 1px #333;
+			}
+		#nosotros .txt
+			{				
+				float: left;
+				width:250px;
+			}
+		#nosotros .art1
+		, #nosotros .art2
+		, #nosotros .art3
+			{
+				float:left;
+				height:auto;
+				margin:20px 0 0 0;
+			}	
+		#nosotros .art1		{	width:360px;}
+		#nosotros .art2		{	width:470px;}		
+		#nosotros .art3		{	width:500px;}
+			#nosotros .art span
+				{
+					display: block;
+					float: left;
+					margin:0 10px 0 0;
+				}
+			#nosotros .art h2
+				{
+					font-family: 'Dorsa', sans-serif;
+					font-size:50px;
+					text-transform: capitalize;
+					font-weight:800;
+					/*background-color: #feffff;
+					color: transparent;	*/
+					color:#feffff;
+					text-align:left;					
+
+					/*-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;*/
+			        
+			        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
+			        text-shadow: rgba(0,0,0,0.3) -3px -3px 8px;
+			        margin:0 0 10px 0;
+				}
+			 #nosotros .art p 	{	padding:0 0 0 0;}
+
+
+/************************************************** PORTAFOLIO */
+#portafolio
+	{
+		background: url(../img/portafolio.jpg) 50% top no-repeat fixed;
+		color: white;
+		height: 965px;
+		padding: 0 0 0 0;
+		overflow: hidden;
+	}
+	#portafolio .bg
+		{
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			position: absolute;
+			background: url("../img/portafolio-img4.png") 50% top no-repeat fixed;
+			z-index: 1;
+		}
+	#portafolio .bg1
+		{
+			min-width:1259px;
+			max-width:1259px;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:50%;
+			margin-left:-641px;
+			z-index: 2;
+		}
+		#portafolio .bg1 .ave1
+			{
+				position:absolute;
+				top:71px;
+				right:0;
+			}
+		#portafolio .bg1 .ave2
+			{
+				margin:0 140px 0 0;
+				position:absolute;
+				top:457px;
+				right:0;
+			}
+		#portafolio .bg1 .ave3
+			{
+				position:absolute;
+				top:52px;
+				left:0;
+			}
+		#portafolio .text
+			{
+				margin:27px 0 0 0;
+				width: 50%;				
+				float: left;
+				background: transparent url("../img/portafolio-linea.png") left 110px no-repeat;
+			}
+			#portafolio .text h3
+				{
+					font-family: 'Dorsa', sans-serif;
+					font-size:110px;
+					text-transform: uppercase;
+					font-weight:800;
+					/*background-color: #3c3e3f;
+					color: transparent;*/
+					color:#3c3e3f;
+					letter-spacing: 3px;
+					text-align:left;					
+
+					/*-webkit-background-clip: text;
+					-moz-background-clip: text;
+					background-clip: text;*/
+			        
+			        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
+			        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
+				}
+			#portafolio .text nav
+				{
+					margin:20px 0 0 0;
+				}
+				#portafolio .text nav li:first-child
+					{
+						border:none;	
+					}
+				#portafolio .text nav li
+					{
+						display: inline;
+						padding:0 10px;
+						border-left:1px solid #000000;
+					}
+					#portafolio .text nav li a span
+						{
+							position:absolute;
+							top:0;
+							left:0;
+							opacity:0.0;
+							-moz-opacity:0.0;
+							-webkit-opacity:0.0;
+						}
+					#portafolio .text nav li a
+						{
+							font-family:"Century Gothic", sans-serif;
+							font-size:12px;
+							text-decoration: none;
+							color:#000000;
+							padding:5px 10px;
+							position: relative;
+						}
+					#portafolio .text nav li a.active
+					, #portafolio .text nav li a:hover
+						{
+							color:#fff;
+							background: url("../img/navportafolio.png") center repeat-x;
+							padding:5px 10px;
+						}
+			#portafolio #filtros
+				{
+					width:780px;
+					height:auto;
+					position: relative;
+					float: left;
+					margin:20px 0 0 0;
+				}
+				#portafolio #filtros div
+					{
+						width:140px;
+						height:140px;
+						float: left;
+						border:3px solid #ffffff;
+						position: relative;
+						background-color: #ffffff;
+						margin:0 10px 10px 0;
+					}
+				#portafolio #filtros div.logo
+					{
+						background-color: transparent;
+						border:none;
+					}
+				#portafolio #filtros .hidden
+					{
+						opacity:0.1;
+						-moz-opacity:0.1;
+						-webkit-opacity:0.1;
+					}
+
+
+/************************************************** BLOG */
+#blog
+	{
+		background: url(../img/blog.png) 50% top repeat-x fixed;
+		color: white;
+		height: 911px;
+		padding: 0 0 0 0;
+		overflow: hidden;
+	}
+	#blog .bg
+		{
+			min-width:1388px;
+			max-width:1388px;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:50%;
+			margin-left:-641px;
+			z-index: 1;
+		}
+		#blog .bg .ave1
+			{
+				position:absolute;
+				top:442px;
+				left:0;
+			}
+		#blog .bg .ave2
+			{				
+				position:absolute;
+				top:132px;
+				right:0;
+			}
+	#blog .story .float-left
+		{
+			width:100%;
+			margin-left:0;
+			margin-right:0;
+		}
+	#blog .text
+		{
+			margin:27px 0 0 0;
+			width: auto;				
+			float: left;
+			background: transparent url("../img/blog-linea.png") left 110px no-repeat;
+			padding:0 0 10px 0;
+		}
+		#blog .text h3
+			{
+				font-family: 'Dorsa', sans-serif;
+				font-size:110px;
+				text-transform: uppercase;
+				font-weight:800;
+				/*background-color: #f2b52a;
+				color: transparent;*/
+				letter-spacing: 3px;
+				text-align:left;
+				
+				color:#f2b52a;					
+
+				/*-webkit-background-clip: text;
+				-moz-background-clip: text;
+				background-clip: text;*/
+		        
+		        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
+		        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
+			}	
+	#blog .art
+		{
+			float:left;
+			width:271px;
+			margin:38px 60px 0 0;
+			height:auto;
+		}
+		#blog .art h5
+			{
+				padding:60px 0 10px 0;
+				height:auto;				
+			}
+		#blog .art h5 a
+			{
+				font-family: 'Dorsa', sans-serif;
+				font-size:40px;
+				color:#ffffff;
+				text-decoration: none;
+			}
+			#blog .art h5 a:hover
+				{
+					color:#F2B52A;
+					text-decoration: underline;
+				}
+		#blog .art h5 span
+			{
+				display: block;
+				padding:65px 0 0 0;
+				width:68px;
+				height:47px;
+				background: url("../img/blog-img3.png") center no-repeat;
+				float:left;
+				font-size:30px;
+				margin:-60px 10px 40px 0;
+				text-align: center;
+				color:#342301;
+				font-weight: bold;
+			}
+		#blog .art p
+			{
+				padding:10px 0 10px 78px;
+				font-family:"Abel", sans-serif;
+				font-size:0.9rem;
+				color:#ffffff;
+
+				text-shadow:1px 1px 1px #333;
+			}
+		#blog .art p img
+			{
+				width:181px;
+				height:114px;
+				border:3px solid #dca426;
+			}
+		#blog .art p a.link
+			{
+				font-family:"Abel", sans-serif;
+				font-size:1rem;
+				color:#000000;
+				background-color: #d7a025;
+				padding:5px 10px;
+				text-decoration: none;
+
+				text-shadow:none;
+			}
+			#blog .art p a.link:hover
+				{
+					background-color: #996603;
+				}
+	#blog .link-blog
+		{
+			display:block;
+			background: url(../img/blog-img4.png) no-repeat center;
+			width:280px;
+			height:37px;
+			font-family:"Abel", sans-serif;
+			font-size:1.5rem;
+			text-align: center;
+			color:#2f2201;
+			text-decoration: none;
+			margin:50px 0 0 360px;
+			padding:5px 0 0 0;
+		}
+		#blog .link-blog:hover
+			{
+				font-weight: bold;
+			}
+
+
+/************************************************** BLOG */
+#contactanos
+	{
+		background: url(../img/contactanos.jpg) 50% top repeat-x fixed;
+		color: white;
+		height: 995px;
+		padding: 0 0 0 0;
+		overflow: hidden;
+	}
+	#contactanos .compartir
+		{
+			width:32px;
+			padding: 7px;
+			margin: 0 0 0 55%;
+			/*float: right;*/
+			position: fixed;
+			right: 0;
+			top: 50px;
+			background-color: rgba(255,255,255,0.4);
+			border-radius: 5px 0 0 5px;
+				-moz-border-radius: 5px 0 0 5px;
+					-webkit-border-radius: 5px 0 0 5px;
+		}
+		#contactanos .compartir a
+			{
+				display: block;
+				width:32px;
+				height:32px;
+				background-image: url("../img/redes.png");
+				background-repeat: no-repeat;
+				float: left;
+				margin: 0px 5px 5px 0px;
+			}
+			#contactanos .compartir a[name="tw"]
+				{
+					background-position:0 0px;
+				}
+			#contactanos .compartir a[name="fb"]
+				{
+					background-position:-40px 1px;
+				}
+			#contactanos .compartir a[name="gplus"]
+				{
+					background-position:-80px 1px;
+				}
+			#contactanos .compartir a:over
+				{
+					box-shadow:0px 2px 2px #666;
+						-moz-box-shadow:0px 2px 2px #666;
+							-webkit-box-shadow:0px 2px 2px #666;
+				}
+		#contactanos .compartir .div
+			{
+				float: left;
+				width:120px;
+			}
+		#contactanos .compartir .divfb
+			{
+				float: left;
+				width:140px;
+			}
+	#contactanos .seguir
+		{
+			width:45%;
+			padding: 10px 0;
+			margin: 0 0 0 55%;
+			float: left;
+		}
+		#contactanos .seguir .div
+			{
+				float: left;
+				width:120px;
+			}
+		#contactanos .seguir .divtw
+			{
+				width:180px;
+				float: left;
+			}
+	#contactanos .text
+		{
+			margin:27px 0 0 0;
+			width: auto;				
+			float: left;
+			background: transparent url("../img/contactanos-linea.png") left 110px no-repeat;
+			padding:0 0 10px 0;
+		}
+		#contactanos .text h3
+			{
+				font-family: 'Dorsa', sans-serif;
+				font-size:110px;
+				text-transform: uppercase;
+				font-weight:800;
+				letter-spacing: 3px;
+				text-align:left;
+				color:#107693;
+		        		        
+		        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
+			}
+	#contactanos .bg
+		{
+			min-width:1403px;
+			max-width:1403px;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:50%;
+			margin-left:-641px;
+			z-index: 1;
+		}
+		#contactanos .bg .ave1
+			{
+				position:absolute;
+				top:132px;
+				right:0;
+			}
+		#contactanos .bg .ave2
+			{				
+				position:absolute;
+				top:442px;
+				left:0;
+			}
+		#contactanos .wrapper
+			{
+				z-index: 2;
+			}
+		#contactanos .form
+			{
+				width:100%;
+				float:left;
+				margin:30px 0 0 0;
+				color:#000;
+				z-index: 2;
+			}
+			#contactanos .form div
+				{
+					float:left;
+					margin:0 0 0 55px;					
+				}
+				#contactanos .form div.sect-1
+					{
+						width:275px;
+						margin:0;					
+					}
+				#contactanos .form div h5
+					{
+						font-family:"Abel", sans-serif;
+						font-size:1.2rem;
+						font-weight: bold;
+						letter-spacing: -1px;
+						margin:5px 0 10px 0;
+						text-shadow:1px 1px 0 #bfcdc8;
+					}
+					#contactanos .form div h5 img
+						{
+							float:left;
+							margin:-5px 10px 10px 0;
+						}
+				#contactanos .form div p
+					{
+						font-family:"Abel", sans-serif;
+						font-size:1rem;
+						color:#000;
+						text-shadow:1px 1px 0 #bfcdc8;
+						position: relative;
+					}
+				#contactanos .form div p span
+					{
+						font-size: 1.1rem;
+						font-weight: bold;
+						background: rgba(255,255,255,0.6);
+						padding: 0 2px;
+						border-radius: 5px;
+					}
+					#contactanos .form div p label.error
+						{
+							position: absolute;
+							top:42px;
+							right:5px;
+							font-family:"Abel", sans-serif;
+							font-size:0.8rem;
+							color:red;
+							text-shadow:1px 1px 0px #fff;
+						}
+				#contactanos .form div h6
+					{
+						font-family:"Abel", sans-serif;
+						font-size:1.1rem;
+						font-weight: bold;
+						letter-spacing: -1px;
+						margin:10px 0 20px 0;
+						text-shadow:1px 1px 0 #bfcdc8;
+					}
+				#contactanos .form div.sect-2
+					{
+						width:282px;											
+					}
+					#contactanos .form div.sect-2 input
+					, #contactanos .form div.sect-2 textarea
+						{
+							border:1px solid #999999;
+							height:31px;
+							width:272px;
+							padding:5px;
+							margin:10px 0 20px 0;
+							font-family:"Abel", sans-serif;
+							font-size:1rem;
+
+							border-radius:5px;
+							-moz-border-radius:5px;
+							-webkit-border-radius:5px;
+
+							box-shadow:1px 1px 0 #fff;
+							-moz-box-shadow:1px 1px 0 #fff;
+							-webkit-box-shadow:1px 1px 0 #fff;
+
+							background: #e8e8e8; /* Old browsers */
+							background: -moz-linear-gradient(top, #e8e8e8 0%, #a7a7a7 100%); /* FF3.6+ */
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#a7a7a7)); /* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* Opera 11.10+ */
+							background: -ms-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* IE10+ */
+							background: linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* W3C */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#a7a7a7',GradientType=0 ); /* IE6-9 */
+						}
+						#contactanos .form div.sect-2 textarea
+							{
+								height:125px;
+							}
+						#contactanos .form div.sect-2 input:hover
+						, #contactanos .form div.sect-2 input:focus
+						, #contactanos .form div.sect-2 textarea:hover
+						, #contactanos .form div.sect-2 textarea:focus
+							{
+								border:1px solid #D7A025;
+							}
+						#contactanos .form div.sect-2 input.error
+						, #contactanos .form div.sect-2 textarea.error
+							{
+								border-color:red;
+							}
+						#contactanos .form div.sect-2 button
+							{
+								width:280px;
+								height:42px;
+								background: url("../img/contactanos-img4.png") center no-repeat;
+								border:none;
+								font-family:"Abel", sans-serif;
+								font-size:1.5rem;
+								color:#edeeed;
+								text-shadow:1px 1px 1px #333;
+								cursor:pointer;
+								position: relative;
+							}
+						#contactanos .footer
+							{
+								float:left;
+								width:100%;
+								height:auto;
+								margin:300px 0 0 0;
+								color:#2f3131;
+								font-family:"Abel", sans-serif;
+								font-size:0.9rem;
+								text-shadow:1px 1px 0 #ccc;
+							}
+							#contactanos .footer a
+								{
+									text-decoration: none;
+									color:#125a7e;									
+								}
+								#contactanos .footer a:hover
+									{
+										text-decoration: underline;
+									}
+							#contactanos .footer .float-left
+							, #contactanos .footer .float-right
+								{
+									margin:0;									
+								}
+								#contactanos .footer .float-left
+									{
+										text-align: left;
+									}
+								#contactanos .footer .float-right
+									{
+										text-align: right;
+									}
+
+
+/************************************************** POPUP */
+#inline_content h4
+, #cboxLoadedContent h4
+	{
+		font-family:"Abel", sans-serif;
+		font-size:1rem;
+		font-weight: bold;
+		letter-spacing: -1px;
+		margin:5px 0 10px 0;
+		text-shadow:1px 1px 0 #ccc;
+	}
+#cboxLoadedContent h4	{ font-size: 2rem;}
+#inline_content h5
+, #cboxLoadedContent h5
+	{
+		font-family:"Abel", sans-serif;
+		font-size:0.9rem;
+		font-weight: bold;
+		letter-spacing: -1px;
+		margin:5px 0 10px 0;
+		text-shadow:1px 1px 0 #ccc;
+	}
+#cboxLoadedContent h5	{ font-size: 1rem;}
+#inline_content p
+, #cboxLoadedContent p
+	{
+		font-family:"Abel", sans-serif;
+		font-size:0.9rem;
+		color:#074556;
+		text-shadow:1px 1px 0 #ccc;
+	}
+
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 30px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 30px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+
+
+#fifth{
+	background: #ccc;
+	height: 400px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+.slide {
+	width: 100%;
+}
+
+
+
+
+@media (min-width: 1000px){
+	body
+		{
+			overflow-x: hidden;
+		}
+
+	#nosotros .bg
+		{
+			max-width:1200px;
+		}
+}
