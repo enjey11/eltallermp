@@ -47,11 +47,17 @@ $(document).ready(function(){
 	$('#nosotros').parallax("50%", 0, 0.1, true);
 	/*$('.bg').parallax("50%", 2500, 0.4, true);*/
 	$('#third').parallax("50%", 2750, 0.3, true);
+
+	$('#page').parallax("50%", 0, 0.3, true);
+
+	$('#mouseScroll').one('mouseenter',function(){
+		$(this).sprite({fps: 10, no_of_frames: 7});
+	});
 	
 	var deck = new $.scrolldeck({
 		slides: '.slide',
 		buttons: '.nav li a',
-		duration: 1000,
+		duration: 3000,
 		//easing: 'easeInOutExpo'
 	});
 

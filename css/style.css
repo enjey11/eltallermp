@@ -1,4 +1,30 @@
-@import url(http://fonts.googleapis.com/css?family=Anton|Oswald);
+@charset "utf-8";
+
+/*
+* FONT
+*/
+@font-face {
+    font-family: 'champagne__limousinesbold';
+    src: url('../fonts/champagne__limousines_bold-webfont.eot');
+    src: url('../fonts/champagne__limousines_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/champagne__limousines_bold-webfont.woff') format('woff'),
+         url('../fonts/champagne__limousines_bold-webfont.ttf') format('truetype'),
+         url('../fonts/champagne__limousines_bold-webfont.svg#champagne__limousinesbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'champagne__limousinesregular';
+    src: url('../fonts/champagne__limousines-webfont.eot');
+    src: url('../fonts/champagne__limousines-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/champagne__limousines-webfont.woff') format('woff'),
+         url('../fonts/champagne__limousines-webfont.ttf') format('truetype'),
+         url('../fonts/champagne__limousines-webfont.svg#champagne__limousinesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /****************
 |^| HTML5 |^|
@@ -38,14 +64,33 @@ body{
 	/*height:100%;*/
 }
 
+#wrapper{
+	width: 100%;
+	min-width: 100%;
+	height: 3890px;
+	position: relative;
+	margin: 0;
+}
 .wrapper
 	{
-		min-width:980px;
-		max-width:1000px;
+		top: 0;
+		left: 50%;
+		width:1000px;
 		height:100%;
-		position: relative;
-		margin:0 auto;
+		position: absolute;
+		margin-left: -500px;
+		z-index: 25;
 	}
+
+.bgPage{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3890px;
+	background: url(../img/bgPage.png) repeat center top;
+	z-index: 10;
+}
 
 #top-link  
 	{
@@ -92,58 +137,131 @@ body{
 			width:100%;
 			height:auto;
 		}
-/************************************************** HEADER */
-header
-	{
-		width:100%;
-		height:95px;
-		position: relative;
-		z-index: 3;
-		/*background: transparent url("../img/menu.png") repeat-x center top;*/
-		background: rgba(255,255,255,0.8);
 
-		border-radius:0 0 5px 5px;
-		-moz-border-radius:0 0 5px 5px;
-		-webkit-border-radius:0 0 5px 5px;
-	}
+.title{
+	font: normal 48px/64px 'champagne__limousinesregular', 'Calibri', Sans-serif, arial;
+	text-transform: uppercase;
+	background: url(../img/bgTitleSection.png) center no-repeat;
+	width: 337px;
+	height: 61px;
+	text-align: center; 
+}
 
-/********************* LOGO */
+/*
+* TOOL-TIP
+*/
+.tooltip{
+    display: inline;
+    position: relative;
+    font: 12px/16px 'champagne__limousinesbold', 'Calibri', Sans-serif, arial;
+}
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(170,1,28,.6);
+    border-radius: 5px;
+    bottom: 30px;
+    color: #fff;
+    content: attr(title);
+    left: 0%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 50px;
+    text-align: center;
+    margin-left: -25px;
+}
+.tooltip:hover:before{
+    border: solid;
+    border-color: #840015 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 24px;
+    content: "";
+    left: 40%;
+    position: absolute;
+    z-index: 99;
+}
 
-.logo
-	{
-		width:254px;
-		height:83px;
-		float: left;
-		position: relative;
-		margin:5px 0 0 20px;
-	}
+.scroll{
+	width: 28px;
+	height: 56px;
+	position: relative;
+	margin: 40px auto 0 auto;
+	background: transparent url(../img/mouseScrollHover.png) top left no-repeat;
+}
+.scroll a{
+	display: block;
+	width: 28px;
+	height: 56px;
+}
 
 /********************* NAV */
 #nav{
-	list-style: none;
-	position: relative;
-	float: right;
+	position: absolute;
+	width: 100px;
+	top: 500px;
+	left: 50%;
+	margin-left: -50px;
+	z-index: 20;
 }
-	#nav li
-		{
-			margin: 35px 30px 0 0;
-			display:inline-block;
-		}
-		#nav li a
-			{
-				font-family:"Abel", sans-serif;
-				font-size:1rem;
-				color:#848484;
-				text-decoration: none;
-				font-weight: bold;
+	#nav ul{
+		width: 88px;
+		height: auto;
+		margin: 0 auto 
+	}
+	#nav li{
+		width: 100%;
+		height: auto;
+		background: url(../img/lineaMenu.png) bottom center no-repeat;
+		text-align: center;
+	}
+	#nav li a{
+		font: 14px/28px 'champagne__limousinesbold', 'Calibri', Sans-serif, arial;
+		text-transform: uppercase;
+		color: #fff;
+		text-decoration: none;
 
-				text-shadow:1px 1px 0 #fff;
-			}
-		#nav li a:hover
-		, #nav li a.current
-			{
-				color:#3ab3e2;
-			}
+		/* Firefox */
+	    -moz-transition-property: all;
+	    -moz-transition-duration: 1s;
+	    -moz-transition-timing-function: ease;
+	    -moz-transition-delay: 0.2s;
+	 
+	 
+	    /* Chrome / Safari */
+	    -webkit-transition-property: all;
+	    -webkit-transition-duration: 1s;
+	    -webkit-transition-timing-function: ease;
+	    -webkit-transition-delay: 0.2s;
+	 
+	 
+	    /* Opera */
+	    -o-transition-property: all;
+	    -o-transition-duration: 1s;
+	    -o-transition-timing-function: ease;
+	    -o-transition-delay: 0.2s;
+	 
+	 
+	    /* Default */
+	    transition-property: all;
+	    transition-duration: 1s;
+	    transition-timing-function: ease;
+	    transition-delay: 0.2s;
+	}
+	#nav li:hover:nth-child(1) a, #nav li.active:nth-child(1) a{
+		color: #5a287f;
+	}
+	#nav li:hover:nth-child(2) a, #nav li.active:nth-child(2) a{
+		color: #0194aa;
+	}
+	#nav li:hover:nth-child(3) a, #nav li.active:nth-child(3) a{
+		color: #a2c037;
+	}
+	#nav li:hover:nth-child(4) a, #nav li.active:nth-child(4) a{
+		color: #99005f;
+	}
+	#nav li:hover:nth-child(5) a, #nav li.active:nth-child(5) a{
+		color: #312b80;
+	}
 
 
 /********************* NAV SECUNDARIO */
@@ -247,141 +365,153 @@ header
 
 /************************************************** INICIO */
 
-#inicio
-	{
-		background:url(../img/bgHome.png) center 0 repeat-x fixed;
-		color: white;
-		height: 768px;
-		margin: 0 auto;
-		padding: 0 0 0px 0;
-		position: relative;
-	}
-	#inicio .redes
-		{
-			position: absolute;
-			top:760px;
-			right:0;
-			z-index: 200;
-		}
-	#inicio .bg
-		{
-			height:813px;
-			width:1000px;
-			margin:0 auto;
-			/*background: url("../img/home-logo.png") 51% 65% no-repeat fixed;*/
-			position:absolute;
-			z-index: 2;
-		}
-		#inicio .text
-			{
-				margin:60px 109px 0 0;
-				/*min-width: 980px;*/
-				width: auto;				
-				float: right;
-				z-index: 4;
-				background: transparent url("../img/home-linea.png") left 100px no-repeat;
-			}
-				#inicio .text .h4
-					{
-						font-family: 'Dorsa', sans-serif;
-						font-size:110px;
-						text-transform: capitalize;
-						font-weight:800;
-						line-height:130px;
-						letter-spacing: 3px;
-						text-align:right;
-						
-						color:#049eca;
-				        				        
-				        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;				        
-					}
+#inicio{
+	background: #C20020 url(../img/bgHome.png) center center repeat-x fixed;
+	color: white;
+	height: 768px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	position: relative;
+}
 
-				#inicio .text p
-					{
-						font-family:"Century Gothic", sans-serif;
-						color:#494948;
-						font-size:14px;
-						margin-top:-10px;
-						text-align: right;
-					}
-	#inicio .ave1
-		{
-			position: absolute;
-			left:-158px;
+	#inicio .bgMenu{
+		background: url(../img/bgMenuHome.png) center top;
+		position: absolute;
+		left: 50%;
+		top: 0px;
+		width: 150px;
+		height: 768px;
+		z-index: 15;
+		margin-left: -75px;
+	}
+
+	#inicio .logo{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 343px;
+		height: 165px;
+		z-index: 20;
+		margin-left: -172px;
+		margin-top: -83px;
+	}
+
+	/*
+	*SHARE
+	*/
+	#inicio .share{
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		background: url(../img/bgShare.png) center no-repeat;
+		top: 193px;
+		left: 50%;
+		margin-left: -40px;
+		z-index: 20;
+	}
+		#inicio .share ul{
+			width: 80px;
+			height: 80px;
 		}
-	
-	#inicio .ave2
-		{
-			position: absolute;
-			top:138px;
-			right:-73px;
+		#inicio .share li{
+			display: block;
+			width: 40px;
+			height: 40px;
+			float: left;
 		}
-	#inicio .q
-		{
-			position: absolute;
-			top:570px;
-			left:50%;
-			margin-left:-36px;
-		}
+			#inicio .share li a, #inicio .share li a:hover{
+				-webkit-transition: background 0.3s linear;
+				-moz-transition: background 0.3s linear;
+				-o-transition: background 0.3s linear;
+				transition: background 0.3s linear;
+			}
+			#inicio .share li a.fb{
+				background: url(../img/share.png) 0px 0px no-repeat;
+				width: 27px;
+				height: 27px;
+				margin: 6px 6px 7px 7px;
+				display: block;
+			}
+				#inicio .share li a.fb:hover{
+					background-position: 0px -28px;
+				}
+			#inicio .share li a.tw{
+				background: url(../img/share.png) -38px 2px no-repeat;
+				width: 27px;
+				height: 27px;
+				margin: 6px 6px 7px 7px;
+				display: block;
+			}
+				#inicio .share li a.tw:hover{
+					background-position: -38px -26px;
+				}
+			#inicio .share li a.yt{
+				background: url(../img/share.png) -76px 0px no-repeat;
+				width: 27px;
+				height: 27px;
+				margin: 6px 6px 7px 7px;
+				display: block;
+			}
+				#inicio .share li a.yt:hover{
+					background-position: -76px -28px;
+				}
+			#inicio .share li a.ct{
+				background: url(../img/share.png) -114px 2px no-repeat;
+				width: 27px;
+				height: 27px;
+				margin: 6px 6px 7px 7px;
+				display: block;
+			}
+				#inicio .share li a.ct:hover{
+					background-position: -114px -28px;
+				}
 
 
 /************************************************** NOSOTROS */
 
 #nosotros
 	{
-		background: url(../img/nosotros.jpg) center top repeat-x fixed;
+		background: #672382 url(../img/bgNosotros.png) center center repeat fixed;
 		color: white;
-		height: 935px;
+		height: 768px;
 		margin: 0 auto;
 		overflow: hidden;
 		padding: 0;
 	}
 
-	#nosotros .ave1
-		{
-			position:absolute;
-			top:461px;
-			left:0;
-		}
+	#nosotros .bgMenu{
+		background: url(../img/bgMenuNosotros.png) center top no-repeat;
+		position: absolute;
+		left: 45px;
+		top: 0px;
+		width: 533px;
+		height: 768px;
+		z-index: 15;
+	}
 
-	#nosotros .ave2
-		{
-			position:absolute;
-			top:47px;
-			right:0;		
-		}
+	#nosotros .logo{
+		top: 205px;
+		left: 0px;
+		width: 233px;
+		height: 112px;
+		position: absolute;
+		z-index: 20;
+	}
+
+	#nosotros .title{
+		margin-left: 462px;
+		margin-top: 164px;
+	}
+
+	#nosotros #nav{
+		top: 360px;
+		left: 70px;
+		margin: 0px; 
+	}
 	
-	#nosotros .html5css3
-		{
-			position:absolute;
-			top:855px;	
-			right:0;		
-		}
-
-	#nosotros .bg
-		{
-			min-width:1444px;
-			max-width:1444px;
-			height:100%;
-			position: absolute;
-			top:0;
-			left:50%;
-			margin-left:-641px;
-			z-index: 1;
-		}	
 	#nosotros .wrapper .story .float-left
 		{
 			width:500px;
-		}
-	#nosotros .bgtext
-		{
-			background: url(../img/nosotros-img3.png) 49% 171px no-repeat fixed;
-			height: 935px;
-			margin: 0 auto;
-			padding: 0;
-			position: absolute;
-			width: 1000px;
-			z-index: 2;
 		}
 	
 	#nosotros .text
@@ -467,9 +597,9 @@ header
 /************************************************** PORTAFOLIO */
 #portafolio
 	{
-		background: url(../img/portafolio.jpg) 50% top no-repeat fixed;
+		background: url(../img/bgServicios.png) 50% 50% no-repeat fixed;
 		color: white;
-		height: 965px;
+		height: 768px;
 		padding: 0 0 0 0;
 		overflow: hidden;
 	}
@@ -612,9 +742,9 @@ header
 /************************************************** BLOG */
 #blog
 	{
-		background: url(../img/blog.png) 50% top repeat-x fixed;
+		background: url(../img/bgEscuela.png) 50% 50% repeat-x fixed;
 		color: white;
-		height: 911px;
+		height: 768px;
 		padding: 0 0 0 0;
 		overflow: hidden;
 	}
@@ -766,7 +896,7 @@ header
 /************************************************** BLOG */
 #contactanos
 	{
-		background: url(../img/contactanos.jpg) 50% top repeat-x fixed;
+		background: url(../img/bgContacto.png) 50% 50% repeat-x fixed;
 		color: white;
 		height: 995px;
 		padding: 0 0 0 0;
