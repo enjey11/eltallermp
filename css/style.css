@@ -67,7 +67,7 @@ body{
 #wrapper{
 	width: 100%;
 	min-width: 100%;
-	height: 3890px;
+	height: 4730px;
 	position: relative;
 	margin: 0;
 }
@@ -87,7 +87,7 @@ body{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 3890px;
+	height: 4730px;
 	background: url(../img/bgPage.png) repeat center top;
 	z-index: 10;
 }
@@ -188,10 +188,13 @@ body{
 	margin: 40px auto 0 auto;
 	background: transparent url(../img/mouseScrollHover.png) top left no-repeat;
 }
-.scroll a{
-	display: block;
+
+.scroll1{
 	width: 28px;
-	height: 56px;
+	height: 66px;
+	position: relative;
+	margin: 40px auto 0 auto;
+	background: transparent url(../img/mouseScrollHover1.png) top left no-repeat;
 }
 
 /********************* NAV */
@@ -467,28 +470,27 @@ body{
 				}
 
 
-/************************************************** NOSOTROS */
+/*
+NOSOTROS 
+*/
 
-#nosotros
-	{
-		background: #672382 url(../img/bgNosotros.png) center center repeat fixed;
-		color: white;
-		height: 768px;
-		margin: 0 auto;
-		overflow: hidden;
-		padding: 0;
-	}
-
+#nosotros{
+	background: #672382 url(../img/bgNosotros.png) center center repeat fixed;
+	color: white;
+	height: 768px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
 	#nosotros .bgMenu{
 		background: url(../img/bgMenuNosotros.png) center top no-repeat;
 		position: absolute;
-		left: 45px;
+		left: 42px;
 		top: 0px;
 		width: 533px;
 		height: 768px;
 		z-index: 15;
 	}
-
 	#nosotros .logo{
 		top: 205px;
 		left: 0px;
@@ -497,410 +499,234 @@ body{
 		position: absolute;
 		z-index: 20;
 	}
-
 	#nosotros .title{
 		margin-left: 462px;
 		margin-top: 164px;
 	}
-
 	#nosotros #nav{
 		top: 360px;
 		left: 70px;
 		margin: 0px; 
 	}
-	
-	#nosotros .wrapper .story .float-left
-		{
-			width:500px;
-		}
-	
-	#nosotros .text
-		{
-			margin:27px 0 0 0;
-			width: 250px;				
-			float: left;
-			background: transparent url("../img/nosotros-linea.png") left 110px no-repeat;
-		}
-		#nosotros .text h3
-			{
-				font-family: 'Dorsa', sans-serif;
-				font-size:110px;
-				text-transform: uppercase;
-				font-weight:800;
-				/*background-color: #feffff;
-				color: transparent;*/
-				color:#feffff;
-				letter-spacing: 3px;
-				text-align:left;					
-
-				/*-webkit-background-clip: text;
-				-moz-background-clip: text;
-				background-clip: text;*/
-		        
-		        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
-		        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
-			}
-		#nosotros .txt
-		, #nosotros .art p
-			{
-				font-family:"Abel", sans-serif;
-				font-size:0.9rem;
-				color:#ffffff;
-				padding:20px 0 0 0;
-
-				text-shadow:1px 1px 1px #333;
-			}
-		#nosotros .txt
-			{				
-				float: left;
-				width:250px;
-			}
-		#nosotros .art1
-		, #nosotros .art2
-		, #nosotros .art3
-			{
-				float:left;
-				height:auto;
-				margin:20px 0 0 0;
-			}	
-		#nosotros .art1		{	width:360px;}
-		#nosotros .art2		{	width:470px;}		
-		#nosotros .art3		{	width:500px;}
-			#nosotros .art span
-				{
-					display: block;
-					float: left;
-					margin:0 10px 0 0;
-				}
-			#nosotros .art h2
-				{
-					font-family: 'Dorsa', sans-serif;
-					font-size:50px;
-					text-transform: capitalize;
-					font-weight:800;
-					/*background-color: #feffff;
-					color: transparent;	*/
-					color:#feffff;
-					text-align:left;					
-
-					/*-webkit-background-clip: text;
-					-moz-background-clip: text;
-					background-clip: text;*/
-			        
-			        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
-			        text-shadow: rgba(0,0,0,0.3) -3px -3px 8px;
-			        margin:0 0 10px 0;
-				}
-			 #nosotros .art p 	{	padding:0 0 0 0;}
+	#nosotros .scroll1{
+		margin-top: 90px;
+	}
+	#nosotros .story .float-left{
+		width:726px;
+	}
+	#nosotros .story{
+		margin: 50px 0 0 235px;
+	}	
+	#nosotros .text{
+		float: left;
+	    font: 18px/24px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+	    margin: 27px 0 0 270px;
+	    text-align: center;
+	    width: 726px;
+	}
 
 
-/************************************************** PORTAFOLIO */
-#portafolio
+/*
+SERVICIOS 
+*/
+#servicios{
+	background: url(../img/bgServicios.png) center center repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 0 0 0 0;
+	overflow: hidden;
+}
+	#servicios .bgMenu{
+		background: url(../img/bgMenuServicios.png) center top no-repeat;
+		position: absolute;
+		left: 42px;
+		top: 0px;
+		width: 150px;
+		height: 768px;
+		z-index: 15;
+	}
+	#servicios .logo{
+		top: 120px;
+		left: 0px;
+		width: 233px;
+		height: 112px;
+		position: absolute;
+		z-index: 20;
+	}
+	#servicios #nav{
+		top: 265px;
+		left: 70px;
+		margin: 0px; 
+	}
+	#servicios .scroll1{
+		margin-top: 150px;
+	}
+	#servicios .title{
+		margin-left: 486px;
+		margin-top: 87px;
+	}
+	#servicios .text{
+		float: left;
+	    font: 18px/24px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+	    margin: 27px 0 0 320px;
+	    text-align: left;
+	    width: 422px;
+	}
+	#servicios .text li{
+		background: url(../img/point.png) left 17px no-repeat;
+		padding: 10px 0 0 15px;
+	}
+	#servicios .text li li{
+		background: none;
+		padding: 0 0 0 20px;
+	}
+
+
+/* 
+ESCUELA 
+*/
+#escuela
 	{
-		background: url(../img/bgServicios.png) 50% 50% no-repeat fixed;
+		background: url(../img/bgEscuela.png) center center repeat-x fixed;
 		color: white;
 		height: 768px;
 		padding: 0 0 0 0;
 		overflow: hidden;
 	}
-	#portafolio .bg
-		{
-			width:100%;
-			height:100%;
-			top:0;
-			left:0;
-			position: absolute;
-			background: url("../img/portafolio-img4.png") 50% top no-repeat fixed;
-			z-index: 1;
-		}
-	#portafolio .bg1
-		{
-			min-width:1259px;
-			max-width:1259px;
-			height:100%;
-			position: absolute;
-			top:0;
-			left:50%;
-			margin-left:-641px;
-			z-index: 2;
-		}
-		#portafolio .bg1 .ave1
-			{
-				position:absolute;
-				top:71px;
-				right:0;
-			}
-		#portafolio .bg1 .ave2
-			{
-				margin:0 140px 0 0;
-				position:absolute;
-				top:457px;
-				right:0;
-			}
-		#portafolio .bg1 .ave3
-			{
-				position:absolute;
-				top:52px;
-				left:0;
-			}
-		#portafolio .text
-			{
-				margin:27px 0 0 0;
-				width: 50%;				
-				float: left;
-				background: transparent url("../img/portafolio-linea.png") left 110px no-repeat;
-			}
-			#portafolio .text h3
-				{
-					font-family: 'Dorsa', sans-serif;
-					font-size:110px;
-					text-transform: uppercase;
-					font-weight:800;
-					/*background-color: #3c3e3f;
-					color: transparent;*/
-					color:#3c3e3f;
-					letter-spacing: 3px;
-					text-align:left;					
+	#escuela .bgMenu{
+		background: url(../img/bgMenuEscuela.png) center top no-repeat;
+		position: absolute;
+		left: 42px;
+		top: 0px;
+		width: 533px;
+		height: 768px;
+		z-index: 15;
+	}
+	#escuela .logo{
+		top: 120px;
+		left: 0px;
+		width: 233px;
+		height: 112px;
+		position: absolute;
+		z-index: 20;
+	}
+	#escuela #nav{
+		top: 265px;
+		left: 70px;
+		margin: 0px; 
+	}
+	#escuela .title{
+		margin-left: 486px;
+		margin-top: 87px;
+	}
+	#escuela .text{
+		float: left;
+	    font: 18px/24px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+	    margin: 27px 0 0 320px;
+	    text-align: left;
+	    width: 422px;
+	}
+	#escuela .text li{
+		background: url(../img/point.png) left 17px no-repeat;
+		padding: 10px 0 0 15px;
+	}
+	#escuela .text li li{
+		background: none;
+		padding: 0 0 0 20px;
+	}
 
-					/*-webkit-background-clip: text;
-					-moz-background-clip: text;
-					background-clip: text;*/
-			        
-			        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
-			        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
-				}
-			#portafolio .text nav
-				{
-					margin:20px 0 0 0;
-				}
-				#portafolio .text nav li:first-child
-					{
-						border:none;	
-					}
-				#portafolio .text nav li
-					{
-						display: inline;
-						padding:0 10px;
-						border-left:1px solid #000000;
-					}
-					#portafolio .text nav li a span
-						{
-							position:absolute;
-							top:0;
-							left:0;
-							opacity:0.0;
-							-moz-opacity:0.0;
-							-webkit-opacity:0.0;
-						}
-					#portafolio .text nav li a
-						{
-							font-family:"Century Gothic", sans-serif;
-							font-size:12px;
-							text-decoration: none;
-							color:#000000;
-							padding:5px 10px;
-							position: relative;
-						}
-					#portafolio .text nav li a.active
-					, #portafolio .text nav li a:hover
-						{
-							color:#fff;
-							background: url("../img/navportafolio.png") center repeat-x;
-							padding:5px 10px;
-						}
-			#portafolio #filtros
-				{
-					width:780px;
-					height:auto;
-					position: relative;
-					float: left;
-					margin:20px 0 0 0;
-				}
-				#portafolio #filtros div
-					{
-						width:140px;
-						height:140px;
-						float: left;
-						border:3px solid #ffffff;
-						position: relative;
-						background-color: #ffffff;
-						margin:0 10px 10px 0;
-					}
-				#portafolio #filtros div.logo
-					{
-						background-color: transparent;
-						border:none;
-					}
-				#portafolio #filtros .hidden
-					{
-						opacity:0.1;
-						-moz-opacity:0.1;
-						-webkit-opacity:0.1;
-					}
-
-
-/************************************************** BLOG */
-#blog
+/*
+CURSOS 
+*/
+#cursos
 	{
-		background: url(../img/bgEscuela.png) 50% 50% repeat-x fixed;
+		background: url(../img/bgCurso.png) center center repeat-x fixed;
 		color: white;
 		height: 768px;
 		padding: 0 0 0 0;
 		overflow: hidden;
 	}
-	#blog .bg
-		{
-			min-width:1388px;
-			max-width:1388px;
-			height:100%;
-			position: absolute;
-			top:0;
-			left:50%;
-			margin-left:-641px;
-			z-index: 1;
-		}
-		#blog .bg .ave1
-			{
-				position:absolute;
-				top:442px;
-				left:0;
-			}
-		#blog .bg .ave2
-			{				
-				position:absolute;
-				top:132px;
-				right:0;
-			}
-	#blog .story .float-left
-		{
-			width:100%;
-			margin-left:0;
-			margin-right:0;
-		}
-	#blog .text
-		{
-			margin:27px 0 0 0;
-			width: auto;				
-			float: left;
-			background: transparent url("../img/blog-linea.png") left 110px no-repeat;
-			padding:0 0 10px 0;
-		}
-		#blog .text h3
-			{
-				font-family: 'Dorsa', sans-serif;
-				font-size:110px;
-				text-transform: uppercase;
-				font-weight:800;
-				/*background-color: #f2b52a;
-				color: transparent;*/
-				letter-spacing: 3px;
-				text-align:left;
-				
-				color:#f2b52a;					
-
-				/*-webkit-background-clip: text;
-				-moz-background-clip: text;
-				background-clip: text;*/
-		        
-		        /*text-shadow: rgba(0,0,0,0.2) -3px -1px 3px;*/
-		        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
-			}	
-	#blog .art
-		{
-			float:left;
-			width:271px;
-			margin:38px 60px 0 0;
-			height:auto;
-		}
-		#blog .art h5
-			{
-				padding:60px 0 10px 0;
-				height:auto;				
-			}
-		#blog .art h5 a
-			{
-				font-family: 'Dorsa', sans-serif;
-				font-size:40px;
-				color:#ffffff;
-				text-decoration: none;
-			}
-			#blog .art h5 a:hover
-				{
-					color:#F2B52A;
-					text-decoration: underline;
-				}
-		#blog .art h5 span
-			{
-				display: block;
-				padding:65px 0 0 0;
-				width:68px;
-				height:47px;
-				background: url("../img/blog-img3.png") center no-repeat;
-				float:left;
-				font-size:30px;
-				margin:-60px 10px 40px 0;
-				text-align: center;
-				color:#342301;
-				font-weight: bold;
-			}
-		#blog .art p
-			{
-				padding:10px 0 10px 78px;
-				font-family:"Abel", sans-serif;
-				font-size:0.9rem;
-				color:#ffffff;
-
-				text-shadow:1px 1px 1px #333;
-			}
-		#blog .art p img
-			{
-				width:181px;
-				height:114px;
-				border:3px solid #dca426;
-			}
-		#blog .art p a.link
-			{
-				font-family:"Abel", sans-serif;
-				font-size:1rem;
-				color:#000000;
-				background-color: #d7a025;
-				padding:5px 10px;
-				text-decoration: none;
-
-				text-shadow:none;
-			}
-			#blog .art p a.link:hover
-				{
-					background-color: #996603;
-				}
-	#blog .link-blog
-		{
-			display:block;
-			background: url(../img/blog-img4.png) no-repeat center;
-			width:280px;
-			height:37px;
-			font-family:"Abel", sans-serif;
-			font-size:1.5rem;
-			text-align: center;
-			color:#2f2201;
-			text-decoration: none;
-			margin:50px 0 0 360px;
-			padding:5px 0 0 0;
-		}
-		#blog .link-blog:hover
-			{
-				font-weight: bold;
-			}
+	#cursos .bgMenu{
+		background: url(../img/bgMenuCurso.png) center top no-repeat;
+		position: absolute;
+		left: 50%;
+		top: 0px;
+		margin-left: -75px;
+		width: 150px;
+		height: 768px;
+		z-index: 15;
+	}
+	#cursos .logo{
+		top: 120px;
+		left: 50%;
+		margin-left: -117px;
+		width: 233px;
+		height: 112px;
+		position: absolute;
+		z-index: 20;
+	}
+	#cursos #nav{
+		top: 265px;
+		left: 50%;
+		margin-left: -50px; 
+	}
+	#cursos .title{
+		margin-left: 486px;
+		margin-top: 87px;
+	}
+	#cursos .text{
+		float: left;
+	    font: 18px/24px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+	    margin: 27px 0 0 320px;
+	    text-align: left;
+	    width: 422px;
+	}
+	#cursos .text li{
+		background: url(../img/point.png) left 17px no-repeat;
+		padding: 10px 0 0 15px;
+	}
+	#cursos .text li li{
+		background: none;
+		padding: 0 0 0 20px;
+	}
 
 
-/************************************************** BLOG */
+/* 
+CONTACTO 
+*/
 #contactanos
 	{
-		background: url(../img/bgContacto.png) 50% 50% repeat-x fixed;
+		background: url(../img/bgContacto.png) center center repeat-x fixed;
 		color: white;
-		height: 995px;
+		height: 768px;
 		padding: 0 0 0 0;
 		overflow: hidden;
+	}
+	#contactanos .bgMenu{
+		background: url(../img/bgMenuContacto.png) center top no-repeat;
+		position: absolute;
+		left: 50%;
+		top: 0px;
+		width: 150px;
+		height: 768px;
+		z-index: 15;
+	}
+	#contactanos .logo{
+		top: 120px;
+		left: 0px;
+		width: 233px;
+		height: 112px;
+		position: absolute;
+		z-index: 20;
+	}
+	#contactanos #nav{
+		top: 265px;
+		left: 70px;
+		margin: 0px; 
+	}
+	#contactanos .title{
+		margin-left: 486px;
+		margin-top: 87px;
 	}
 	#contactanos .compartir
 		{
