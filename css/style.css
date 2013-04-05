@@ -617,22 +617,21 @@ ESCUELA
 	}
 	#escuela .title{
 		margin-left: 486px;
-		margin-top: 87px;
+		margin-top: 60px;
 	}
 	#escuela .text{
 		float: left;
-	    font: 18px/24px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+	    font: 18px/22px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
 	    margin: 27px 0 0 320px;
 	    text-align: left;
-	    width: 422px;
+	    width: 680px;
 	}
-	#escuela .text li{
-		background: url(../img/point.png) left 17px no-repeat;
-		padding: 10px 0 0 15px;
+	#escuela .text p{
+		text-align: justify;
+		margin: 0 0 8px 0;
 	}
-	#escuela .text li li{
-		background: none;
-		padding: 0 0 0 20px;
+	#escuela p.right{
+		text-align: right;
 	}
 
 /*

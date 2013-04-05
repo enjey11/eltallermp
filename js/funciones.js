@@ -65,7 +65,7 @@ $(document).ready(function(){
 		$(this).sprite({fps: 10, no_of_frames: 7});
 	});
 
-	$('#mouseScroll1').one('mouseenter',function(){
+	$('#mouseScroll1, #mouseScroll2, #mouseScroll3, #mouseScroll4').one('mouseenter',function(){
 		$(this).sprite({fps: 10, no_of_frames: 5});
 	});
 	
@@ -91,4 +91,5 @@ $(document).ready(function(){
 	/****************************************** POPUP */
 	$(".ajax").colorbox({width:"1000px", height:"700px",rel:'ajax'});
 	$(".inline").colorbox({inline:true, width:"50%"});
+	$("a.colorbox").colorbox({photo:true});
 })
