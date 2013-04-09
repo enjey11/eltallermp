@@ -16,8 +16,7 @@
 			slides,
 			scrollpoints = [],
 			sections = [],
-			//windowHeight = $(window).height(),
-			windowHeight = $(".slide").height(),
+			windowHeight = $(window).height(),
 			i;
 		
 		var defaults = {
@@ -139,10 +138,10 @@
 			}
 			
 			// if last slide is shorter than height of window, increase height
-			/*var lastSlide = slides.eq(slides.length-1);
+			var lastSlide = slides.eq(slides.length-1);
 			if (lastSlide.outerHeight() < $(window).height()) {
 				lastSlide.height(lastSlide.height()+$(window).height()-lastSlide.outerHeight());
-			}*/
+			}
 			
 			updateNav();
 		};

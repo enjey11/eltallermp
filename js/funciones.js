@@ -65,7 +65,7 @@ $(document).ready(function(){
 		$(this).sprite({fps: 10, no_of_frames: 7});
 	});
 
-	$('#mouseScroll1, #mouseScroll2, #mouseScroll3, #mouseScroll4').one('mouseenter',function(){
+	$('#mouseScroll1, #mouseScroll2, #mouseScroll3, #mouseScroll4, mouseScroll5').one('mouseenter',function(){
 		$(this).sprite({fps: 10, no_of_frames: 5});
 	});
 	

@@ -67,7 +67,7 @@ body{
 #wrapper{
 	width: 100%;
 	min-width: 100%;
-	height: 4730px;
+	/*height: 4730px;*/
 	position: relative;
 	margin: 0;
 }
@@ -87,7 +87,7 @@ body{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 4730px;
+	height: 4660px;
 	background: url(../img/bgPage.png) repeat center top;
 	z-index: 10;
 }
@@ -195,6 +195,14 @@ body{
 	position: relative;
 	margin: 40px auto 0 auto;
 	background: transparent url(../img/mouseScrollHover1.png) top left no-repeat;
+}
+
+.scroll2{
+	width: 28px;
+	height: 66px;
+	position: relative;
+	margin: 40px auto 0 auto;
+	background: transparent url(../img/mouseScrollHover2.png) top left no-repeat;
 }
 
 /********************* NAV */
@@ -580,7 +588,13 @@ SERVICIOS
 		background: none;
 		padding: 0 0 0 20px;
 	}
-
+	#servicios .img{
+		margin: 120px 0 0 800px;
+	}
+	#servicios .img a{
+		margin: 80px 0 0 0;
+		display: block;
+	}
 
 /* 
 ESCUELA 
@@ -670,25 +684,46 @@ CURSOS
 		margin-left: -50px; 
 	}
 	#cursos .title{
-		margin-left: 486px;
-		margin-top: 87px;
+		margin-left: 40px;
+		margin-top: 253px;
 	}
-	#cursos .text{
+	#cursos .text, #cursos .text1{
 		float: left;
 	    font: 18px/24px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
-	    margin: 27px 0 0 320px;
 	    text-align: left;
-	    width: 422px;
 	}
-	#cursos .text li{
+	#cursos .text{
+		margin: 27px 0 0 25px;
+	    width: 375px;
+	}
+	#cursos .text1{
+		float: right;
+		margin: 27px 25px 0 0;
+	    width: 375px;
+	    z-index: 1000;
+	}
+	#cursos .text li, #cursos .text1 li{
 		background: url(../img/point.png) left 17px no-repeat;
 		padding: 10px 0 0 15px;
 	}
-	#cursos .text li li{
+	#cursos .text li li, #cursos .text1 li li{
 		background: none;
 		padding: 0 0 0 20px;
 	}
-
+	#cursos .scroll1{
+		margin-top: 150px;
+	}
+	#cursos #img1{
+		top: 506px;
+		left: 75%;
+		position: absolute;
+	}
+	#cursos #img2{
+		top: 10px;
+		left: 21%;
+		position: absolute;
+		margin-left: -76px;
+	}
 
 /* 
 CONTACTO 
@@ -701,309 +736,180 @@ CONTACTO
 		padding: 0 0 0 0;
 		overflow: hidden;
 	}
+	#contactanos .scroll2{
+		margin-top: 100px;
+	}
 	#contactanos .bgMenu{
 		background: url(../img/bgMenuContacto.png) center top no-repeat;
 		position: absolute;
 		left: 50%;
 		top: 0px;
-		width: 150px;
+		width: 533px;
 		height: 768px;
 		z-index: 15;
+		margin-left: -75px;
 	}
 	#contactanos .logo{
-		top: 120px;
-		left: 0px;
+		top: 195px;
+		left: 767px;
 		width: 233px;
 		height: 112px;
 		position: absolute;
 		z-index: 20;
 	}
 	#contactanos #nav{
-		top: 265px;
-		left: 70px;
+		top: 345px;
+		left: 833px;
 		margin: 0px; 
 	}
 	#contactanos .title{
-		margin-left: 486px;
-		margin-top: 87px;
+		margin-left: 216px;
+		margin-top: 166px;
 	}
-	#contactanos .compartir
-		{
-			width:32px;
-			padding: 7px;
-			margin: 0 0 0 55%;
-			/*float: right;*/
-			position: fixed;
-			right: 0;
-			top: 50px;
-			background-color: rgba(255,255,255,0.4);
-			border-radius: 5px 0 0 5px;
-				-moz-border-radius: 5px 0 0 5px;
-					-webkit-border-radius: 5px 0 0 5px;
+	#contactanos .story{
+		z-index: 20;
+	}
+	#contactanos .form{
+		width:100%;
+		float:left;
+		margin:30px 0 0 0;
+		color:#000;
+		z-index: 20;
+	}
+		#contactanos .form div{
+			float:left;
+			margin:0 0 0 55px;					
 		}
-		#contactanos .compartir a
-			{
-				display: block;
-				width:32px;
-				height:32px;
-				background-image: url("../img/redes.png");
-				background-repeat: no-repeat;
-				float: left;
-				margin: 0px 5px 5px 0px;
+			#contactanos .form div.sect-1{
+				width:275px;
+				margin:0;					
 			}
-			#contactanos .compartir a[name="tw"]
-				{
-					background-position:0 0px;
-				}
-			#contactanos .compartir a[name="fb"]
-				{
-					background-position:-40px 1px;
-				}
-			#contactanos .compartir a[name="gplus"]
-				{
-					background-position:-80px 1px;
-				}
-			#contactanos .compartir a:over
-				{
-					box-shadow:0px 2px 2px #666;
-						-moz-box-shadow:0px 2px 2px #666;
-							-webkit-box-shadow:0px 2px 2px #666;
-				}
-		#contactanos .compartir .div
-			{
-				float: left;
-				width:120px;
+			#contactanos .form div h5{
+				font-family:"Abel", sans-serif;
+				font-size:1.2rem;
+				font-weight: bold;
+				letter-spacing: -1px;
+				margin:5px 0 10px 0;
+				text-shadow:1px 1px 0 #bfcdc8;
 			}
-		#contactanos .compartir .divfb
-			{
-				float: left;
-				width:140px;
-			}
-	#contactanos .seguir
-		{
-			width:45%;
-			padding: 10px 0;
-			margin: 0 0 0 55%;
-			float: left;
-		}
-		#contactanos .seguir .div
-			{
-				float: left;
-				width:120px;
-			}
-		#contactanos .seguir .divtw
-			{
-				width:180px;
-				float: left;
-			}
-	#contactanos .text
-		{
-			margin:27px 0 0 0;
-			width: auto;				
-			float: left;
-			background: transparent url("../img/contactanos-linea.png") left 110px no-repeat;
-			padding:0 0 10px 0;
-		}
-		#contactanos .text h3
-			{
-				font-family: 'Dorsa', sans-serif;
-				font-size:110px;
-				text-transform: uppercase;
-				font-weight:800;
-				letter-spacing: 3px;
-				text-align:left;
-				color:#107693;
-		        		        
-		        text-shadow: rgba(0,0,0,0.2) -3px -3px 8px;
-			}
-	#contactanos .bg
-		{
-			min-width:1403px;
-			max-width:1403px;
-			height:100%;
-			position: absolute;
-			top:0;
-			left:50%;
-			margin-left:-641px;
-			z-index: 1;
-		}
-		#contactanos .bg .ave1
-			{
-				position:absolute;
-				top:132px;
-				right:0;
-			}
-		#contactanos .bg .ave2
-			{				
-				position:absolute;
-				top:442px;
-				left:0;
-			}
-		#contactanos .wrapper
-			{
-				z-index: 2;
-			}
-		#contactanos .form
-			{
-				width:100%;
-				float:left;
-				margin:30px 0 0 0;
-				color:#000;
-				z-index: 2;
-			}
-			#contactanos .form div
-				{
+			#contactanos .form div h5 img{
 					float:left;
-					margin:0 0 0 55px;					
+					margin:-5px 10px 10px 0;
 				}
-				#contactanos .form div.sect-1
-					{
-						width:275px;
-						margin:0;					
+			#contactanos .form div p{
+				font-family:"Abel", sans-serif;
+				font-size:1rem;
+				color:#000;
+				text-shadow:1px 1px 0 #bfcdc8;
+				position: relative;
+			}
+			#contactanos .form div p span{
+				font-size: 1.1rem;
+				font-weight: bold;
+				background: rgba(255,255,255,0.6);
+				padding: 0 2px;
+				border-radius: 5px;
+			}
+				#contactanos .form div p label.error{
+					position: absolute;
+					top:42px;
+					right:5px;
+					font-family:"Abel", sans-serif;
+					font-size:0.8rem;
+					color:red;
+					text-shadow:1px 1px 0px #fff;
+				}
+			#contactanos .form div h6{
+				font-family:"Abel", sans-serif;
+				font-size:1.1rem;
+				font-weight: bold;
+				letter-spacing: -1px;
+				margin:10px 0 20px 0;
+				text-shadow:1px 1px 0 #bfcdc8;
+			}
+			#contactanos .form div.sect-2{ width:282px;	}
+				#contactanos .form div.sect-2 input
+				, #contactanos .form div.sect-2 textarea{
+					border:1px solid #999999;
+					height:31px;
+					width:272px;
+					padding:5px;
+					margin:10px 0 20px 0;
+					font-family:"Abel", sans-serif;
+					font-size:1rem;
+
+					border-radius:5px;
+					-moz-border-radius:5px;
+					-webkit-border-radius:5px;
+
+					box-shadow:1px 1px 0 #fff;
+					-moz-box-shadow:1px 1px 0 #fff;
+					-webkit-box-shadow:1px 1px 0 #fff;
+
+					background: #e8e8e8; /* Old browsers */
+					background: -moz-linear-gradient(top, #e8e8e8 0%, #a7a7a7 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#a7a7a7)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* IE10+ */
+					background: linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#a7a7a7',GradientType=0 ); /* IE6-9 */
+				}
+					#contactanos .form div.sect-2 textarea{	height:125px;	}
+					#contactanos .form div.sect-2 input:hover
+					, #contactanos .form div.sect-2 input:focus
+					, #contactanos .form div.sect-2 textarea:hover
+					, #contactanos .form div.sect-2 textarea:focus{
+						border:1px solid #D7A025;
 					}
-				#contactanos .form div h5
-					{
-						font-family:"Abel", sans-serif;
-						font-size:1.2rem;
-						font-weight: bold;
-						letter-spacing: -1px;
-						margin:5px 0 10px 0;
-						text-shadow:1px 1px 0 #bfcdc8;
+					#contactanos .form div.sect-2 input.error
+					, #contactanos .form div.sect-2 textarea.error{
+						border-color:red;
 					}
-					#contactanos .form div h5 img
-						{
-							float:left;
-							margin:-5px 10px 10px 0;
-						}
-				#contactanos .form div p
+					#contactanos .form div.sect-2 button
 					{
+						width:280px;
+						height:42px;
+						background: url("../img/contactanos-img4.png") center no-repeat;
+						border:none;
 						font-family:"Abel", sans-serif;
-						font-size:1rem;
-						color:#000;
-						text-shadow:1px 1px 0 #bfcdc8;
+						font-size:1.5rem;
+						color:#edeeed;
+						text-shadow:1px 1px 1px #333;
+						cursor:pointer;
 						position: relative;
 					}
-				#contactanos .form div p span
-					{
-						font-size: 1.1rem;
-						font-weight: bold;
-						background: rgba(255,255,255,0.6);
-						padding: 0 2px;
-						border-radius: 5px;
-					}
-					#contactanos .form div p label.error
-						{
-							position: absolute;
-							top:42px;
-							right:5px;
-							font-family:"Abel", sans-serif;
-							font-size:0.8rem;
-							color:red;
-							text-shadow:1px 1px 0px #fff;
-						}
-				#contactanos .form div h6
-					{
+					#contactanos .footer{
+						float:left;
+						width:100%;
+						height:auto;
+						margin:300px 0 0 0;
+						color:#2f3131;
 						font-family:"Abel", sans-serif;
-						font-size:1.1rem;
-						font-weight: bold;
-						letter-spacing: -1px;
-						margin:10px 0 20px 0;
-						text-shadow:1px 1px 0 #bfcdc8;
+						font-size:0.9rem;
+						text-shadow:1px 1px 0 #ccc;
 					}
-				#contactanos .form div.sect-2
-					{
-						width:282px;											
+					#contactanos .footer a{
+						text-decoration: none;
+						color:#125a7e;									
 					}
-					#contactanos .form div.sect-2 input
-					, #contactanos .form div.sect-2 textarea
-						{
-							border:1px solid #999999;
-							height:31px;
-							width:272px;
-							padding:5px;
-							margin:10px 0 20px 0;
-							font-family:"Abel", sans-serif;
-							font-size:1rem;
+						#contactanos .footer a:hover{	text-decoration: underline;	}
+					#contactanos .footer .float-left
+					, #contactanos .footer .float-right{	margin:0;}
+						#contactanos .footer .float-left{	text-align: left;}
+						#contactanos .footer .float-right{	text-align: right;}
 
-							border-radius:5px;
-							-moz-border-radius:5px;
-							-webkit-border-radius:5px;
-
-							box-shadow:1px 1px 0 #fff;
-							-moz-box-shadow:1px 1px 0 #fff;
-							-webkit-box-shadow:1px 1px 0 #fff;
-
-							background: #e8e8e8; /* Old browsers */
-							background: -moz-linear-gradient(top, #e8e8e8 0%, #a7a7a7 100%); /* FF3.6+ */
-							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#a7a7a7)); /* Chrome,Safari4+ */
-							background: -webkit-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* Chrome10+,Safari5.1+ */
-							background: -o-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* Opera 11.10+ */
-							background: -ms-linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* IE10+ */
-							background: linear-gradient(top, #e8e8e8 0%,#a7a7a7 100%); /* W3C */
-							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#a7a7a7',GradientType=0 ); /* IE6-9 */
-						}
-						#contactanos .form div.sect-2 textarea
-							{
-								height:125px;
-							}
-						#contactanos .form div.sect-2 input:hover
-						, #contactanos .form div.sect-2 input:focus
-						, #contactanos .form div.sect-2 textarea:hover
-						, #contactanos .form div.sect-2 textarea:focus
-							{
-								border:1px solid #D7A025;
-							}
-						#contactanos .form div.sect-2 input.error
-						, #contactanos .form div.sect-2 textarea.error
-							{
-								border-color:red;
-							}
-						#contactanos .form div.sect-2 button
-							{
-								width:280px;
-								height:42px;
-								background: url("../img/contactanos-img4.png") center no-repeat;
-								border:none;
-								font-family:"Abel", sans-serif;
-								font-size:1.5rem;
-								color:#edeeed;
-								text-shadow:1px 1px 1px #333;
-								cursor:pointer;
-								position: relative;
-							}
-						#contactanos .footer
-							{
-								float:left;
-								width:100%;
-								height:auto;
-								margin:300px 0 0 0;
-								color:#2f3131;
-								font-family:"Abel", sans-serif;
-								font-size:0.9rem;
-								text-shadow:1px 1px 0 #ccc;
-							}
-							#contactanos .footer a
-								{
-									text-decoration: none;
-									color:#125a7e;									
-								}
-								#contactanos .footer a:hover
-									{
-										text-decoration: underline;
-									}
-							#contactanos .footer .float-left
-							, #contactanos .footer .float-right
-								{
-									margin:0;									
-								}
-								#contactanos .footer .float-left
-									{
-										text-align: left;
-									}
-								#contactanos .footer .float-right
-									{
-										text-align: right;
-									}
+/* 
+CONTACTO 
+*/
+#footer
+	{
+		background: #672382 url(../img/bgFooter.png) center 0 repeat-x;
+		color: white;
+		height: 50px;
+		padding: 0 0 0 0;
+		overflow: hidden;
+	}
 
 
 /************************************************** POPUP */
