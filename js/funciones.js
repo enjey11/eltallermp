@@ -65,7 +65,7 @@ $(document).ready(function(){
 		$(this).sprite({fps: 10, no_of_frames: 7});
 	});
 
-	$('#mouseScroll1, #mouseScroll2, #mouseScroll3, #mouseScroll4, mouseScroll5').one('mouseenter',function(){
+	$('#mouseScroll1, #mouseScroll2, #mouseScroll3, #mouseScroll4, #mouseScroll5').one('mouseenter',function(){
 		$(this).sprite({fps: 10, no_of_frames: 5});
 	});
 	
@@ -92,4 +92,39 @@ $(document).ready(function(){
 	$(".ajax").colorbox({width:"1000px", height:"700px",rel:'ajax'});
 	$(".inline").colorbox({inline:true, width:"50%"});
 	$("a.colorbox").colorbox({photo:true});
+
+	/****************************************** GMAP */
+	$("#map").gMap({
+		controls: {
+			panControl: true,
+			zoomControl: true,
+			mapTypeControl: true,
+			scaleControl: true,
+			streetViewControl: false,
+			overviewMapControl: false
+     	},
+		/*controls: true,
+		maptype: 'TERRAIN',*/
+		scrollwheel: true,
+		
+		markers: [
+			{
+				latitude: -12.073378,
+				longitude: -77.066334,
+				icon: {
+					image: "img/gmap.png",
+					iconsize: [92, 92],
+					iconanchor: [12,46]
+				}
+			}
+		],
+		icon: {
+			image: "img/gmap.png", 
+			iconsize: [92, 92],
+			iconanchor: [12, 46]
+		},
+		latitude: -12.073378,
+		longitude: -77.066334,
+		zoom: 15
+	});
 })

@@ -16,8 +16,8 @@
 			slides,
 			scrollpoints = [],
 			sections = [],
-			//windowHeight = $(window).height(),
-			windowHeight = $(".slide").height(),
+			windowHeight = $(window).height(),
+			//windowHeight = $(".slide").height(),
 			i;
 		
 		var defaults = {

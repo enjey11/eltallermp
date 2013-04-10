@@ -52,6 +52,35 @@ body{
 	height:100%;
 }
 
+a, a:hover , button, button:hover{
+	/* Firefox */
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -moz-transition-timing-function: ease;
+    -moz-transition-delay: 0.2s;
+ 
+ 
+    /* Chrome / Safari */
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-delay: 0.2s;
+ 
+ 
+    /* Opera */
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    -o-transition-timing-function: ease;
+    -o-transition-delay: 0.2s;
+ 
+ 
+    /* Default */
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0.2s;
+}
+
 /*html	{ height:100%;}*/
 
 /************************************************** GLOBALS */
@@ -87,7 +116,7 @@ body{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 4660px;
+	height: 4658px;
 	background: url(../img/bgPage.png) repeat center top;
 	z-index: 10;
 }
@@ -103,7 +132,8 @@ body{
 		background:url("../img/scrolltop.png") no-repeat center;
 		z-index:999;
 	}
-
+.left{ float: left; text-align: left;}
+.right{ float: right; text-align: right;}
 .story .float-left
 , .story .float-right
 	{
@@ -203,6 +233,14 @@ body{
 	position: relative;
 	margin: 40px auto 0 auto;
 	background: transparent url(../img/mouseScrollHover2.png) top left no-repeat;
+}
+
+.popup{
+	background: #461F63;
+	padding: 20px 20px 30px 20px;
+}
+.popup div{
+	text-align: center;
 }
 
 /********************* NAV */
@@ -766,12 +804,32 @@ CONTACTO
 		margin-left: 216px;
 		margin-top: 166px;
 	}
-	#contactanos .story{
+	#contactanos .gmap{
+		width: 729px;
+		height: 229px;
+		background: #1d194b;
+		position: absolute;
+		top: 450px;
 		z-index: 20;
 	}
+	#contactanos .info{
+		width: 729px;
+		height: 30px;
+		position: absolute;
+		top: 705px;
+		background: url(../img/spriteInfo.png) 0px 0px no-repeat;
+	}
+		#contactanos .info li{
+			width: 33%;
+			float: left;
+		}
+		#contactanos .info li p{
+			font: 14px/16px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+    		padding: 0 0 0 50px;
+		}
 	#contactanos .form{
-		width:100%;
-		float:left;
+		/*width:100%;*/
+		position: absolute;
 		margin:30px 0 0 0;
 		color:#000;
 		z-index: 20;
@@ -784,121 +842,113 @@ CONTACTO
 				width:275px;
 				margin:0;					
 			}
-			#contactanos .form div h5{
-				font-family:"Abel", sans-serif;
-				font-size:1.2rem;
-				font-weight: bold;
-				letter-spacing: -1px;
-				margin:5px 0 10px 0;
-				text-shadow:1px 1px 0 #bfcdc8;
-			}
-			#contactanos .form div h5 img{
-					float:left;
-					margin:-5px 10px 10px 0;
-				}
 			#contactanos .form div p{
-				font-family:"Abel", sans-serif;
-				font-size:1rem;
-				color:#000;
-				text-shadow:1px 1px 0 #bfcdc8;
 				position: relative;
 			}
-			#contactanos .form div p span{
-				font-size: 1.1rem;
-				font-weight: bold;
-				background: rgba(255,255,255,0.6);
-				padding: 0 2px;
-				border-radius: 5px;
+			#contactanos .form div p label.error{
+				position: absolute;
+				top:15px;
+				right:5px;
+				font: 13px/8px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+				color:red;
 			}
-				#contactanos .form div p label.error{
-					position: absolute;
-					top:42px;
-					right:5px;
-					font-family:"Abel", sans-serif;
-					font-size:0.8rem;
-					color:red;
-					text-shadow:1px 1px 0px #fff;
-				}
-			#contactanos .form div h6{
-				font-family:"Abel", sans-serif;
-				font-size:1.1rem;
-				font-weight: bold;
-				letter-spacing: -1px;
-				margin:10px 0 20px 0;
-				text-shadow:1px 1px 0 #bfcdc8;
-			}
-			#contactanos .form div.sect-2{ width:344px;	}
-				#contactanos .form div.sect-2 input
-				, #contactanos .form div.sect-2 textarea{
-					background: #a1a1a2;
-					border:1px solid #a1a1a2;
-					height:31px;
-					width:272px;
-					padding:5px;
-					margin:0 0 20px 0;
-					font-family:"Abel", sans-serif;
-					font-size:1rem;
+			#contactanos .form div.sect-2{ width:354px;	}
+			#contactanos .form div.sect-2 input
+			, #contactanos .form div.sect-2 textarea{
+				background: #a1a1a2;
+				border:1px solid #a1a1a2;
+				height:31px;
+				width:309px;
+				padding:5px;
+				margin:0 0 20px 0;
+				font: 16px/18px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
 
-					-webkit-box-shadow:inset -2px -2px 10px #5C5C5C;
-					-moz-box-shadow:inset -2px -2px 10px #5C5C5C;
-					box-shadow:inset -2px -2px 10px #5C5C5C;
-				}
-					#contactanos .form div.sect-2 textarea{	height:125px;	}
-					#contactanos .form div.sect-2 input:hover
-					, #contactanos .form div.sect-2 input:focus
-					, #contactanos .form div.sect-2 textarea:hover
-					, #contactanos .form div.sect-2 textarea:focus{
-						border:1px solid #312b80;
-					}
-					#contactanos .form div.sect-2 input.error
-					, #contactanos .form div.sect-2 textarea.error{
-						border-color:red;
-					}
-					#contactanos .form div.sect-2 button
-					{
-						width:280px;
-						height:42px;
-						background: url("../img/contactanos-img4.png") center no-repeat;
-						border:none;
-						font-family:"Abel", sans-serif;
-						font-size:1.5rem;
-						color:#edeeed;
-						text-shadow:1px 1px 1px #333;
-						cursor:pointer;
-						position: relative;
-					}
-					#contactanos .footer{
-						float:left;
-						width:100%;
-						height:auto;
-						margin:300px 0 0 0;
-						color:#2f3131;
-						font-family:"Abel", sans-serif;
-						font-size:0.9rem;
-						text-shadow:1px 1px 0 #ccc;
-					}
-					#contactanos .footer a{
-						text-decoration: none;
-						color:#125a7e;									
-					}
-						#contactanos .footer a:hover{	text-decoration: underline;	}
-					#contactanos .footer .float-left
-					, #contactanos .footer .float-right{	margin:0;}
-						#contactanos .footer .float-left{	text-align: left;}
-						#contactanos .footer .float-right{	text-align: right;}
+				-webkit-box-shadow:inset -2px -2px 10px #5C5C5C;
+				-moz-box-shadow:inset -2px -2px 10px #5C5C5C;
+				box-shadow:inset -2px -2px 10px #5C5C5C;
+			}
+			#contactanos .form div.sect-2 textarea{
+				width: 344px;
+				height:94px;
+			}
+			#contactanos .form div.sect-2 input:hover
+			, #contactanos .form div.sect-2 input:focus
+			, #contactanos .form div.sect-2 textarea:hover
+			, #contactanos .form div.sect-2 textarea:focus{
+				border:1px solid #312b80;
+			}
+			#contactanos .form div.sect-2 input.error
+			, #contactanos .form div.sect-2 textarea.error{
+				border-color:red;
+			}
+			#contactanos .form div.sect-2 input.nombre{
+				padding-left: 45px;
+				background: #a1a1a2 url(../img/spriteForm.png) 5px 5px no-repeat;
+			}
+			#contactanos .form div.sect-2 input.email{
+				padding-left: 45px;
+				background: #a1a1a2 url(../img/spriteForm.png) 5px -58px no-repeat;
+			}
+			#contactanos .form div.sect-2 input.asunto{
+				padding-left: 45px;
+				background: #a1a1a2 url(../img/spriteForm.png) 5px -121px no-repeat;
+			}
+			#contactanos .form div.sect-2 button{
+				border:none;
+				font: 14px/14px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+				color:#fff;
+				cursor:pointer;
+				position: relative;
+				float: right;
+				text-transform: uppercase;
+				margin: 5px 0 0 20px;
+			}
+			#contactanos .form div.sect-2 button:hover{
+				color: #312B80;
+			}
+			#contactanos .form div.sect-2 button.btnReset{
+				width:63px;
+				height:40px;
+				background: url(../img/spriteBtn.png) 0 0 no-repeat;
+			}
+			#contactanos .form div.sect-2 button.btnSend{
+				width:123px;
+				height:40px;
+				background: url(../img/spriteBtn.png) -88px 0 no-repeat;
+			}
 
 /* 
 CONTACTO 
 */
-#footer
-	{
-		background: #672382 url(../img/bgFooter.png) center 0 repeat-x;
-		color: white;
-		height: 50px;
-		padding: 0 0 0 0;
-		overflow: hidden;
+#footer{
+	background: #672382 url(../img/bgFooter.png) center 0 repeat-x;
+	color: white;
+	height: 50px;
+	padding: 0 0 0 0;
+	overflow: hidden;
+	font: 14px/18px 'champagne__limousinesregular','Calibri',Sans-serif,arial;
+}
+	#footer .left,
+	#footer .right{
+		margin: 5px 0 0 0;
 	}
-
+	#footer .left a.logo{
+		width: 25px;
+		height: 24px;
+		background: url(../img/logoQuadoo.png) 0 0 no-repeat;
+		display: block;
+		float: left;
+		margin: 6px 8px 0 0;
+	}
+	#footer .left a.logo:hover{
+		background: url(../img/logoQuadoo.png) 0 -24px no-repeat;
+	}
+	#footer .left p{
+		width: 200px;
+		float: left;
+	}
+	#footer .left a{ color: #fff; text-decoration: none; display: block; float: left;}
+	#footer .left a:hover{ color: #646465;}
 
 /************************************************** POPUP */
 #inline_content h4
@@ -909,7 +959,8 @@ CONTACTO
 		font-weight: bold;
 		letter-spacing: -1px;
 		margin:5px 0 10px 0;
-		text-shadow:1px 1px 0 #ccc;
+		color: #fff;
+		text-align: center;
 	}
 #cboxLoadedContent h4	{ font-size: 2rem;}
 #inline_content h5
@@ -920,7 +971,8 @@ CONTACTO
 		font-weight: bold;
 		letter-spacing: -1px;
 		margin:5px 0 10px 0;
-		text-shadow:1px 1px 0 #ccc;
+		color:#ccc;
+		text-align: center;
 	}
 #cboxLoadedContent h5	{ font-size: 1rem;}
 #inline_content p
@@ -929,7 +981,8 @@ CONTACTO
 		font-family:"Abel", sans-serif;
 		font-size:0.9rem;
 		color:#074556;
-		text-shadow:1px 1px 0 #ccc;
+		color: #ccc;
+		text-align: center;
 	}
 
 
