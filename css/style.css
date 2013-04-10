@@ -700,7 +700,7 @@ CURSOS
 	#cursos .bgMenu{
 		background: url(../img/bgMenuCurso.png) center top no-repeat;
 		position: absolute;
-		left: 50%;
+		left: 500px;
 		top: 0px;
 		margin-left: -75px;
 		width: 150px;
@@ -709,7 +709,7 @@ CURSOS
 	}
 	#cursos .logo{
 		top: 120px;
-		left: 50%;
+		left: 500px;
 		margin-left: -117px;
 		width: 233px;
 		height: 112px;
@@ -718,7 +718,7 @@ CURSOS
 	}
 	#cursos #nav{
 		top: 265px;
-		left: 50%;
+		left: 500px;
 		margin-left: -50px; 
 	}
 	#cursos .title{
@@ -753,12 +753,12 @@ CURSOS
 	}
 	#cursos #img1{
 		top: 506px;
-		left: 75%;
+		left: 750px;
 		position: absolute;
 	}
 	#cursos #img2{
 		top: 10px;
-		left: 21%;
+		left: 210px;
 		position: absolute;
 		margin-left: -76px;
 	}
@@ -780,7 +780,7 @@ CONTACTO
 	#contactanos .bgMenu{
 		background: url(../img/bgMenuContacto.png) center top no-repeat;
 		position: absolute;
-		left: 50%;
+		left: 500px;
 		top: 0px;
 		width: 533px;
 		height: 768px;
